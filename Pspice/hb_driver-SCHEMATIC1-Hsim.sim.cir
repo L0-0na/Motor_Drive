@@ -1,0 +1,25 @@
+** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\Ê—‘…\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+** Creating circuit file "hb_driver-schematic1-hsim.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 8ms 0 
+.OPTIONS NOPRBMSG
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS CHGTOL= 0.01n
+.OPTIONS DIGINITSTATE= 0
+.OPTIONS DIGIOLVL= 2
+.OPTIONS GMIN= 1.0E-9
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 10.0u
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\hb_driver-SCHEMATIC1.net" 
+
+
+.END

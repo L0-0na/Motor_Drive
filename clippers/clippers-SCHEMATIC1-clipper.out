@@ -1,0 +1,101 @@
+
+**** 02/27/22 19:57:33 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-clipper"  [ G:\HIAST\4th year\second term\\clippers-SCHEMATIC1-clipper.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "clippers-SCHEMATIC1-clipper.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.4ms 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\clippers-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING clippers-SCHEMATIC1.net ****
+* source CLIPPERS
+C_C6         N19948 N17364  1u  
+C_C7         0 N164351  1u  
+D_D4         N164351 N17364 D1N4148 
+D_D5         N17364 0 D1N4148 
+V_V4         N19948 0  
++SIN 0 10 10k 0 0 0
+
+**** RESUMING clippers-SCHEMATIC1-clipper.sim.cir ****
+.END
+
+**** 02/27/22 19:57:33 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-clipper"  [ G:\HIAST\4th year\second term\\clippers-SCHEMATIC1-clipper.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 02/27/22 19:57:33 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-clipper"  [ G:\HIAST\4th year\second term\\clippers-SCHEMATIC1-clipper.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N17364) 7.695E-15 (N19948)    0.0000 (N164351) 15.39E-15                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

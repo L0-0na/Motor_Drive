@@ -1,0 +1,9 @@
+* source TRGEN
+R_R1         N00673 N01131  10k  
+R_R2         N00673 N00637  8.2k  
+R_R         N01131 N00756  1220  
+C_C1         N00756 N00637  10n  
+X_U3A         GND N00756 VCC+ VCC- N00637 TL082
+V_V1         GND VCC- -15
+X_U4A         N00673 GND VCC+ VCC- N01131 TL082
+V_V3         VCC+ GND 15

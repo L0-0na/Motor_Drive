@@ -1,0 +1,42 @@
+(ExpressProject "H_bridge"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\h_bridge.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (LastUsedLibraryBrowseDirectory "C:\Program Files\Orcad\Capture\Library\Iec")
+  (PartMRUSelector
+    (L298
+      (FullPartName "L298.Normal")
+      (LibraryName "C:\PROGRAM FILES\ORCAD\CAPTURE\LIBRARY\OLDLIBS\TI1.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "G:\HIAST\4th year\second term\Ê—‘…\Pspice\h_bridge.dsn")
+      (Path "Design Resources"
+         "G:\HIAST\4th year\second term\Ê—‘…\Pspice\h_bridge.dsn" "SCHEMATIC1")
+      (Select "Design Resources"
+         "G:\HIAST\4th year\second term\Ê—‘…\Pspice\h_bridge.dsn" "SCHEMATIC1"
+         "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 385"))
+      (Tab 0))))

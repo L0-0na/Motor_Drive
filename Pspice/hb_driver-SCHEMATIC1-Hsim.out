@@ -1,0 +1,677 @@
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "hb_driver-schematic1-hsim.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 8ms 0 
+.OPTIONS NOPRBMSG
+.OPTIONS ABSTOL= 1.0n
+.OPTIONS CHGTOL= 0.01n
+.OPTIONS DIGINITSTATE= 0
+.OPTIONS DIGIOLVL= 2
+.OPTIONS GMIN= 1.0E-9
+.OPTIONS RELTOL= 0.01
+.OPTIONS VNTOL= 10.0u
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\hb_driver-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING hb_driver-SCHEMATIC1.net ****
+* source HB_DRIVER
+Q_Q1         VCC N01032 N02340 BD241
+C_C1         N01360 N01387  1n  
+X_U12         N05006 N01330 Sw_tOpen PARAMS: tOpen=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+R_R31         N05528 N04901  10k  
+C_C2         N01330 N01273  1n  
+Q_Q2         VCC N01169 N02261 BD241
+X_U7A         N01330 N01387 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_R33         N063051 N02261  60  
+V_V1         VCC 0 24Vdc
+V_V4         N04732 0  
++PULSE 5 0 0 0.1ns 0.1ns 0.5ms 1ms
+R_R21         N05348 VCC  1k  
+X_D1         0 N02340 D1N5814 
+Q_Q51         0 N05348 N05604 BD242
+X_U1A         0 0 N04732 N05006 N14693 N05006 $G_CD4000_VDD $G_CD4000_VSS
++  CD4013A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+L_L1         N02340 N063051  92mH  
+X_D2         0 N02261 D1N5814 
+X_Q12         N05348 N05380 0 BC337/SIE
+X_D3         0 N05604 D1N5814 
+Q_Q5         0 N01032 N02340 BD242
+L_L2         N05604 N062651  92mH  
+X_U2B         0 0 N04858 N04901 N05488 N04901 $G_CD4000_VDD $G_CD4000_VSS
++  CD4013A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Q13         N01169 N01360 0 BC337/SIE
+X_D4         N05604 VCC D1N5814 
+Q_Q6         0 N01169 N02261 BD242
+X_U3A         N04732 N04858 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+Q_Q11         VCC N05348 N05604 BD241
+R_R41         N05488 N05380  10k  
+X_Q14         N05320 N05528 0 BC337/SIE
+X_D5         0 N05328 D1N5814 
+R_R1         N01169 VCC  1k  
+Q_Q21         VCC N05320 N05328 BD241
+X_D6         N05328 VCC D1N5814 
+X_Q15         N01032 N01273 0 BC337/SIE
+Q_Q61         0 N05320 N05328 BD242
+R_R2         N01032 VCC  1k  
+X_D7         N02340 VCC D1N5814 
+R_R3         N01360 N01387  10k  
+R_R11         N05320 VCC  1k  
+X_U10         N14693 N01330 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+C_C11         N05528 N04901  1n  
+X_D8         N02261 VCC D1N5814 
+R_R4         N01330 N01273  10k  
+C_C21         N05488 N05380  1n  
+R_R32         N062651 N05328  60  
+
+**** RESUMING hb_driver-schematic1-hsim.sim.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node 0
+*
+* Moving X_U2B.U1:IN2 from analog node 0 to new digital node 0$AtoD
+X$0_AtoD1
++ 0
++ 0$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U2B.U1:IN1 from analog node 0 to new digital node 0$AtoD2
+X$0_AtoD2
++ 0
++ 0$AtoD2
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U1A.U1:IN2 from analog node 0 to new digital node 0$AtoD3
+X$0_AtoD3
++ 0
++ 0$AtoD3
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U1A.U1:IN1 from analog node 0 to new digital node 0$AtoD4
+X$0_AtoD4
++ 0
++ 0$AtoD4
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01387
+*
+* Moving X_U7A.U1:OUT1 from analog node N01387 to new digital node N01387$DtoA
+X$N01387_DtoA1
++ N01387$DtoA
++ N01387
++ $G_DPWR
++ $G_DGND
++ DtoA_STD
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N04901
+*
+* Moving X_U2B.U2:D1 from analog node N04901 to new digital node N04901$AtoD
+X$N04901_AtoD1
++ N04901
++ N04901$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U2B.U2:QBAR1 from analog node N04901 to new digital node N04901$DtoA
+X$N04901_DtoA1
++ N04901$DtoA
++ N04901
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N01330
+*
+* Moving X_U7A.U1:IN1 from analog node N01330 to new digital node N01330$AtoD
+X$N01330_AtoD1
++ N01330
++ N01330$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N04732
+*
+* Moving X_U3A.U1:IN1 from analog node N04732 to new digital node N04732$AtoD
+X$N04732_AtoD1
++ N04732
++ N04732$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_STD_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U1A.U2:CLK from analog node N04732 to new digital node N04732$AtoD2
+X$N04732_AtoD2
++ N04732
++ N04732$AtoD2
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N05488
+*
+* Moving X_U2B.U2:Q1 from analog node N05488 to new digital node N05488$DtoA
+X$N05488_DtoA1
++ N05488$DtoA
++ N05488
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N05006
+*
+* Moving X_U1A.U2:D1 from analog node N05006 to new digital node N05006$AtoD
+X$N05006_AtoD1
++ N05006
++ N05006$AtoD
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ AtoD_4000A_NX
++       PARAMS: CAPACITANCE=   0     
+* Moving X_U1A.U2:QBAR1 from analog node N05006 to new digital node N05006$DtoA
+X$N05006_DtoA1
++ N05006$DtoA
++ N05006
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N14693
+*
+* Moving X_U1A.U2:Q1 from analog node N14693 to new digital node N14693$DtoA
+X$N14693_DtoA1
++ N14693$DtoA
++ N14693
++ $G_CD4000_VDD
++ $G_CD4000_VSS
++ DtoA_4000A
++       PARAMS: DRVH=   1.6490E+03 DRVL=   1.6490E+03 CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+X$CD4000_PWR 0 CD4000_PWR
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.DFWD       X_D2.DFWD       X_D3.DFWD       X_D4.DFWD       
+          IS  344.707200E-09  344.707200E-09  344.707200E-09  344.707200E-09 
+           N    1.63162         1.63162         1.63162         1.63162      
+         ISR  162.854500E-09  162.854500E-09  162.854500E-09  162.854500E-09 
+          NR    1.70788         1.70788         1.70788         1.70788      
+         IKF     .113748         .113748         .113748         .113748     
+          BV  120.29          120.29          120.29          120.29         
+         IBV    6.4502          6.4502          6.4502          6.4502       
+          RS    2.706738E-03    2.706738E-03    2.706738E-03    2.706738E-03 
+          TT   60.667000E-09   60.667000E-09   60.667000E-09   60.667000E-09 
+         CJO  534.450000E-12  534.450000E-12  534.450000E-12  534.450000E-12 
+          VJ     .48463          .48463          .48463          .48463      
+           M     .40878          .40878          .40878          .40878      
+
+
+               X_D5.DFWD       X_D6.DFWD       X_D7.DFWD       X_D8.DFWD       
+          IS  344.707200E-09  344.707200E-09  344.707200E-09  344.707200E-09 
+           N    1.63162         1.63162         1.63162         1.63162      
+         ISR  162.854500E-09  162.854500E-09  162.854500E-09  162.854500E-09 
+          NR    1.70788         1.70788         1.70788         1.70788      
+         IKF     .113748         .113748         .113748         .113748     
+          BV  120.29          120.29          120.29          120.29         
+         IBV    6.4502          6.4502          6.4502          6.4502       
+          RS    2.706738E-03    2.706738E-03    2.706738E-03    2.706738E-03 
+          TT   60.667000E-09   60.667000E-09   60.667000E-09   60.667000E-09 
+         CJO  534.450000E-12  534.450000E-12  534.450000E-12  534.450000E-12 
+          VJ     .48463          .48463          .48463          .48463      
+           M     .40878          .40878          .40878          .40878      
+
+
+               D74CLMP         D74             
+          IS    1.000000E-15  100.000000E-18 
+          RS    2              25            
+         CJO    2.000000E-12    2.000000E-12 
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BD241           BD242           BC337           Q74             
+               NPN             PNP             NPN             NPN             
+          IS    2.447000E-12  632.400000E-15  180.000000E-15  100.000000E-18 
+          BF  208.2           112.1           449.302          49            
+          NF    1               1               1               1            
+         VAF  100             100              95                            
+         IKF     .9743          2.187            .82                         
+         ISE   70.690000E-12  962.800000E-15    8.480000E-15  100.000000E-18 
+          NE    1.565           1.373           1.566                        
+          BR   12.59           66.4            16.919            .03         
+          NR    1               1               1.005           1            
+         VAR                                   13                            
+         IKR    3.86          125.8              .663                        
+         ISC   11.680000E-09  974.400000E-15  102.000000E-15  400.000000E-18 
+          NC    1.835           1.207           1.764                        
+          NK     .6134           .6196                                       
+          RB     .1              .1              .75           50            
+         RBM                                     .375                        
+         IRB                                  100.000000E-06                 
+          RE                                     .17                         
+          RC     .4685           .2066           .289          20            
+         CJE  188.500000E-12  379.800000E-12   63.400000E-12    1.000000E-12 
+         VJE                                     .85             .9          
+         MJE     .4878           .4937           .372            .5          
+         CJC  142.000000E-12  508.900000E-12   16.600000E-12  500.000000E-15 
+         VJC                                     .78             .8          
+         MJC     .4353           .4847           .433                        
+        XCJC                                     .65                         
+         CJS                                                    3.000000E-12 
+         VJS                                                     .7          
+         MJS                                                     .33         
+          FC                                     .75                         
+          TF   19.850000E-09   17.410000E-09  810.000000E-12  200.000000E-12 
+         XTF    5.945           1.062           4.3                          
+         VTF   10              10               1.5                          
+         ITF  164.1             5.921            .45                         
+         PTF                                    1                            
+          TR  194.200000E-09   89.170000E-09    2.600000E-09   10.000000E-09 
+         XTB    1.5             2.1             1.5                          
+         XTI                                    4.8                          
+          KF                                    5.000000E-15                 
+          CN    2.42            2.2             2.42            2.42         
+           D     .87             .52             .87             .87         
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U12.Smod      X_U10.Smod      
+         RON     .01             .01         
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DIN74           DIN4000A        
+        FILE DSO_DTOA        DSO_DTOA        
+      FORMAT    6               6            
+    TIMESTEP  100.000000E-12  100.000000E-12 
+      S0NAME 0               0               
+       S0TSW    3.500000E-09   15.000000E-09 
+       S0RLO    7.13            1            
+       S0RHI  389              80.000000E+03 
+      S1NAME 1               1               
+       S1TSW    5.500000E-09   15.000000E-09 
+       S1RLO  467              40.000000E+03 
+       S1RHI  200               1            
+      S2NAME X               X               
+       S2TSW    3.500000E-09   15.000000E-09 
+       S2RLO   42.9           800            
+       S2RHI  116             800            
+      S3NAME R               R               
+       S3TSW    3.500000E-09   15.000000E-09 
+       S3RLO   42.9           800            
+       S3RHI  116             800            
+      S4NAME F               F               
+       S4TSW    3.500000E-09   15.000000E-09 
+       S4RLO   42.9           800            
+       S4RHI  116             800            
+      S5NAME Z               Z               
+       S5TSW    3.500000E-09   15.000000E-09 
+       S5RLO  200.000000E+03    1.000000E+06 
+       S5RHI  200.000000E+03    1.000000E+06 
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DO4000A_NX      DO74_NX         
+        FILE DSO_ATOD        DSO_ATOD        
+      FORMAT    6               6            
+     CHGONLY    1               1            
+    TIMESTEP  100.000000E-12  100.000000E-12 
+      S0NAME 0               0               
+       S0VHI                    1.35         
+       S0VLO   -3              -1.5          
+      S2NAME 1               1               
+       S2VHI    3               7            
+       S2VLO                    1.35         
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_04            D0_GATE         
+      TPLHMN    4.800000E-09    0            
+      TPLHTY   12.000000E-09    0            
+      TPLHMX   22.000000E-09    0            
+      TPHLMN    3.200000E-09    0            
+      TPHLTY    8.000000E-09    0            
+      TPHLMX   15.000000E-09    0            
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_CD4013A       
+  TPCLKQLHMN   60.000010E-09 
+  TPCLKQLHTY  150.000000E-09 
+  TPCLKQLHMX  300.000000E-09 
+  TPCLKQHLMN   60.000010E-09 
+  TPCLKQHLTY  150.000000E-09 
+  TPCLKQHLMX  300.000000E-09 
+   TPPCQLHMN   70.000000E-09 
+   TPPCQLHTY  175.000000E-09 
+   TPPCQLHMX  300.000000E-09 
+   TPPCQHLMN   70.000000E-09 
+   TPPCQHLTY  175.000000E-09 
+   TPPCQHLMX  300.000000E-09 
+    TWCLKLMN    0            
+    TWCLKLTY  125.000000E-09 
+    TWCLKLMX  200.000000E-09 
+    TWCLKHMN    0            
+    TWCLKHTY  125.000000E-09 
+    TWCLKHMX  200.000000E-09 
+     TWPCLMN    0            
+     TWPCLTY  125.000000E-09 
+     TWPCLMX  200.000000E-09 
+   TSUDCLKMN    0            
+   TSUDCLKTY   20.000000E-09 
+   TSUDCLKMX   40.000000E-09 
+ TSUPCCLKHMN    0            
+ TSUPCCLKHTY    0            
+ TSUPCCLKHMX    0            
+    THDCLKMN    0            
+    THDCLKTY    0            
+    THDCLKMX    0            
+  TSUCECLKMN    0            
+  TSUCECLKTY    0            
+  TSUCECLKMX    0            
+   THCECLKMN    0            
+   THCECLKTY    0            
+   THCECLKMX    0            
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STD          IO_4000A        
+        DRVL  104               1.649000E+03 
+        DRVH   96.4             1.649000E+03 
+       AtoD1 AtoD_STD        AtoD_4000A      
+       AtoD2 AtoD_STD_NX     AtoD_4000A_NX   
+       AtoD3 AtoD_STD        AtoD_4000A      
+       AtoD4 AtoD_STD_NX     AtoD_4000A_NX   
+       DtoA1 DtoA_STD        DtoA_4000A      
+       DtoA2 DtoA_STD        DtoA_4000A      
+       DtoA3 DtoA_STD        DtoA_4000A      
+       DtoA4 DtoA_STD        DtoA_4000A      
+    DIGPOWER                 CD4000_PWR      
+      TSWHL1    1.511000E-09    7.070000E-09 
+      TSWHL2    1.487000E-09    6.940000E-09 
+      TSWHL3    1.511000E-09    9.330000E-09 
+      TSWHL4    1.487000E-09    9.180000E-09 
+      TSWLH1    3.517000E-09    8.580000E-09 
+      TSWLH2    3.564000E-09    8.370000E-09 
+      TSWLH3    3.517000E-09   10.730000E-09 
+      TSWLH4    3.564000E-09   10.590000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+**** 04/05/22 18:28:27 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-Hsim"  [ G:\HIAST\4th year\second term\\Pspice\hb_driver-schematic1-hsim.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   24.0000  (N01032)     .0600 (N01169)   20.7410 (N01273)     .6783     
+
+(N01330)    4.5616 (N01360)     .0900 (N01387)     .0900 (N02261)   20.0700     
+
+(N02340)     .7618 (N04732)    5.0000 (N04901)    4.5804 (N05006)    4.5616     
+
+(N05320)     .0599 (N05328)     .7617 (N05348)   20.7410 (N05380)     .0410     
+
+(N05488)     .0410 (N05528)     .6783 (N05604)   20.0700 (N14693)     .0440     
+
+($G_DGND)    0.0000                   ($G_DPWR)    5.0000                       
+
+(N062651)   20.0700                   (N063051)     .7618                       
+
+(X_Q12.4)     .0410                   (X_Q12.5)     .0410                       
+
+(X_Q12.6)   20.7410                   (X_Q12.7)    0.0000                       
+
+(X_Q12.8)    0.0000                   (X_Q13.4)     .0900                       
+
+(X_Q13.5)     .0900                   (X_Q13.6)   20.7410                       
+
+(X_Q13.7)    0.0000                   (X_Q13.8)    0.0000                       
+
+(X_Q14.4)     .6783                   (X_Q14.5)     .6783                       
+
+(X_Q14.6)     .0599                   (X_Q14.7)    0.0000                       
+
+(X_Q14.8)    0.0000                   (X_Q15.4)     .6783                       
+
+(X_Q15.5)     .6783                   (X_Q15.6)     .0600                       
+
+(X_Q15.7)    0.0000                   (X_Q15.8)    0.0000                       
+
+(X_U10.3)    0.0000                   (X_U12.3)    1.0000                       
+
+($G_CD4000_VDD)    5.0000             ($G_CD4000_VSS)    0.0000                 
+
+(X$0_AtoD1.NORM)   -1.2500            (X$0_AtoD2.NORM)   -1.2500                
+
+(X$0_AtoD3.NORM)   -1.2500            (X$0_AtoD4.NORM)   -1.2500                
+
+(X$N01330_AtoD1.1)    1.5648          (X$N01330_AtoD1.2)     .7824              
+
+(X$N01330_AtoD1.3)    2.2862          (X$N04732_AtoD1.1)    1.5648              
+
+(X$N04732_AtoD1.2)     .7824          (X$N04732_AtoD1.3)    2.2862              
+
+(X$N04732_AtoD2.NORM)    1.2500       (X$N04901_AtoD1.NORM)    1.0402           
+
+(X$N05006_AtoD1.NORM)    1.0308       (X$N04901_DtoA1.DRVGND)     .0751         
+
+(X$N04901_DtoA1.DRVPWR)    4.5809     (X$N05006_DtoA1.DRVGND)     .0748         
+
+(X$N05006_DtoA1.DRVPWR)    4.5621     (X$N05488_DtoA1.DRVGND)     .0409         
+
+(X$N05488_DtoA1.DRVPWR)    4.9489     (X$N14693_DtoA1.DRVGND)     .0439         
+
+(X$N14693_DtoA1.DRVPWR)    4.9489     (X$N04901_DtoA1.X1.DRVN)     .0015        
+
+(X$N04901_DtoA1.X1.DRVP)     .0012    (X$N05006_DtoA1.X1.DRVN)     .0015        
+
+(X$N05006_DtoA1.X1.DRVP)     .0012    (X$N05488_DtoA1.X1.DRVN)     .0015        
+
+(X$N05488_DtoA1.X1.DRVP)     .0012    (X$N14693_DtoA1.X1.DRVN)     .0015        
+
+(X$N14693_DtoA1.X1.DRVP)     .0012    (X$0_AtoD1.XNORM.THRESHOLD)    1.5000     
+
+(X$0_AtoD2.XNORM.THRESHOLD)    1.5000 (X$0_AtoD3.XNORM.THRESHOLD)    1.5000     
+
+(X$0_AtoD4.XNORM.THRESHOLD)    1.5000 (X$N04732_AtoD2.XNORM.THRESHOLD)    1.5000
+
+(X$N04901_AtoD1.XNORM.THRESHOLD)    1.5000                                      
+
+(X$N05006_AtoD1.XNORM.THRESHOLD)    1.5000               
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(N01387$DtoA) : 0  (X_U1A.CLRB) : 1   (  N04858) : 0     (X_U1A.PREB) : 1       
+
+(N04732$AtoD) : 1  ( 0$AtoD3) : 0     (N04732$AtoD2) : 1                        
+
+(X_U2B.PREB) : 1   (N04901$DtoA) : 1  (  0$AtoD) : 0     (N05006$AtoD) : 1      
+
+(N01330$AtoD) : 1  (N04901$AtoD) : 1  (X_U2B.CLRB) : 1   ( 0$AtoD4) : 0         
+
+(N05488$DtoA) : 0  (N05006$DtoA) : 1  (N14693$DtoA) : 0  ( 0$AtoD2) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.915E-01
+    V_V4        -2.042E-05
+    X_U12.V1    -1.000E-09
+    X_U10.V1     0.000E+00
+    X$DIGIFPWR.VDPWR  -1.398E-02
+    X$DIGIFPWR.VDGND   3.573E-05
+    X$CD4000_PWR.VVDD  -1.156E-03
+    X$CD4000_PWR.VVSS  -8.041E-04
+
+    TOTAL POWER DISSIPATION   1.67E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .52
+

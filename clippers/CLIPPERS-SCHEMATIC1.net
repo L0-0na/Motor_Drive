@@ -1,0 +1,7 @@
+* source CLIPPERS
+C_C6         N19948 N17364  1u  
+C_C7         0 N164351  1u  
+D_D4         N164351 N17364 D1N4148 
+D_D5         N17364 0 D1N4148 
+V_V4         N19948 0  
++SIN 0 10 10k 0 0 0

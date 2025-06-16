@@ -1,0 +1,42 @@
+
+**** 02/27/22 19:36:53 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ ** Profile: "SCHEMATIC1-clipper"  [ G:\HIAST\4th year\second term\\clippers-SCHEMATIC1-clipper.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "clippers-SCHEMATIC1-clipper.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.4ms 0 
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+.INC ".\clippers-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING clippers-SCHEMATIC1.net ****
+* source CLIPPERS
+C_C6         N19948 N17364  1u  
+D_D5         N17364 N17684 D1N4148 
+V_V4         N19948 0  
++SIN 0 10 10k 0 0 0
+
+**** RESUMING clippers-SCHEMATIC1-clipper.sim.cir ****
+.END
+
+ERROR -- Less than 2 connections at node N17684
+ERROR -- Node N17364 is floating
+ERROR -- Node N17684 is floating
