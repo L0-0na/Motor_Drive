@@ -1,7 +1,7 @@
 # Stepper Motor Drive Circuit Project
 
 **Authors:** Luna Salameh, Zaid Nasser  
-**Supervisors:** M. Maher Al-Homsi, M. Ali Abbas, M. Mahjoub Daher  
+**Supervisors:** Eng. Maher Al-Homsi, Eng. Ali Abbas, Prof. Mahjoub Daher  
 **Institution:** Higher Institute of Applied Sciences and Technology (HIAST), Electronic and Mechanical Systems Department  
 **Date:** April 4, 2022  
 
